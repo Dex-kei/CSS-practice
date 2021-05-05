@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #afa;
+            float: left;
+            margin: 10px;
+            /* 0.5秒反應 */
+            transition: .5s;
+
+
+            /* 負值-  設定從視窗外面 */
+            /* 這邊先下translateX 會導致下方 box們會一起預先位移 */
+            /* transform: translateX(-220px); */
+        }
+
+        .translateX {
+            /* 預先在網頁外 */
+            transform: translateX(-210px)
+        }
+
+        .translateX:hover {
+            /* hover時 能夠位移出來顯示 類似左下角小客服*/
+            transform: translateX(0px);
+        }
+
+        .rotate:hover {
+            /* 旋轉變形 */
+            transform: translateX(100px) rotate(360deg);
+        }
+
+        .scale:hover {
+            /* 縮放變形 X軸(倍率)  X軸或者Y軸*/
+            transform: scaleX(0.5);
+        }
+
+        .skewX:hover {
+            /* 傾斜變形 X軸(角度) 也能 skewX(-30deg) skewY(-30deg) */
+            transform: skewX(-30deg);
+        }
+
+        .rotate2 {
+            transform-origin: 0 0;
+        }
+
+        .rotate2:hover {
+            transform: rotate(360deg) translate(100px); 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box translateX">translateX</div>
+    <div class="box rotate">rotate</div>
+    <div class="box scale">scale</div>
+    <div class="box skewX">skewX</div>
+    <div class="box rotate2">rotate2</div>
+</body>
+
+</html>

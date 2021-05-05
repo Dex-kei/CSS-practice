@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contain {
+            /* 位置  透過relative包住 h2與hoveropacity*/
+            position: relative;
+            margin: 200px;
+            background-color: #000000;
+        }
+
+        .hoveropacity {
+            height: 500px;
+            background: url('./images/Musee\ du\ Louvre.jpg') center center no-repeat;
+            /* 顯示濃度 */
+            opacity: 1;
+            /* 轉換速度 */
+            transition: .5s;
+        }
+
+        .img {
+            width: 100%;
+        }
+
+        h2 {
+            margin: 0;
+            color: #ffffff;
+            text-align: center;
+            opacity: .3;
+            transition: .5s;
+
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+
+        }
+
+        /* 父權contain觸發時 和hoveropacity同步 */
+        .contain:hover .hoveropacity {
+            opacity: .5;
+        }
+
+        /* 父權contain觸發時 h2 */
+        .contain:hover h2 {
+            opacity: 1;
+            background-color: #000000;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- 包住兩個元素 讓h2同層hoveropacity 但不互相干擾顯示狀態  -->
+    <!-- 如果hoveropacity裡面包覆h2 會讓:hover狀態 因父權關係 干擾h2的顯示 -->
+    <div class="contain">
+        <div class="hoveropacity"></div>
+        <h2>Paris</h2>
+    </div>
+
+</body>
+
+</html>

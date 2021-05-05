@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #horse {
+            width: 186px;
+            height: 141px;
+            position: absolute;
+            background-image: url("./images/horse-animation.jpg");
+            animation-name: run;
+            animation-direction: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-start;
+        }
+
+        @keyframes run {
+            0% {
+                background-position: -15px -13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="horse"></div>
+</body>
+
+</html>

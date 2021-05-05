@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+            display: flex;
+        }
+
+        .box {
+            margin: 10px;
+            width: 200px;
+
+            background-color: #afa;
+
+            /* 單行 */
+            /* text-overflow: ellipsis; */
+            /* 需搭配其他屬性才有作用 */
+            /* white-space: nowrap; */
+            /* 多出來的 隱藏 */
+            /* overflow: hidden; */
+
+
+            /* 多行  前面有贅字  */
+            display: -webkit-box;
+            /* 顯示行數 */
+            -webkit-line-clamp: 4;
+                                /* 垂直 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repudiandae, nulla impedit
+            architecto ad odio placeat mollitia ratione amet cum, excepturi officiis incidunt! Facilis voluptate
+            incidunt nemo cum, ea ex.</div>
+        <div class="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium libero modi, at
+            temporibus tenetur corrupti fuga odio. Eveniet, illo! In atque quia, sed odio odit numquam excepturi cum
+            laboriosam ullam.\</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sunt vero ipsam dolor!
+            Consectetur iusto adipisci amet perferendis earum necessitatibus, minus impedit optio sed laboriosam
+            sapiente, aliquam reiciendis possimus dolor!</div>
+    </div>
+</body>
+
+</html>

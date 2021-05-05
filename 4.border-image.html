@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            /* 邊框圖片重複 */
+            width: 100px;
+            height: 100px;
+            /* 設定 20px寬的border */
+            border: 20px solid transparent;
+            /* 切九宮格 四個角落不動 延伸中段  20px切割   圖案原本60px  */
+            /* round"重複"中斷圖案  stretch直接"延伸"圖案  */
+            border-image: url(./images/border-image.png) 20 round;
+        }
+        .box p{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>h123</p>
+    </div>
+</body>
+
+</html>

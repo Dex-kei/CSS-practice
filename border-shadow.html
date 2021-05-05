@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: darkseagreen;
+        float: left;
+        margin: 10px;
+        /*  */
+        /* box-shadow: 10px 10px 10px #000; */
+        transition: .5s;
+    }
+    .box-shadow:hover{
+        box-shadow: 10px 10px 10px #000000;
+    }
+    .box-shadow2:hover{
+        box-shadow: 10px 10px 10px 10px #000;
+    }
+    /* inset內陰影 */
+    .box-shadow3:hover{
+        box-shadow: 10px 0px 10px 10px #0044ff
+        inset; 
+    }
+</style>
+
+</head>
+<body>
+    <div class="box box-shadow"></div>
+    <div class="box box-shadow2"></div>
+    <div class="box box-shadow3"></div>
+</body>
+</html>

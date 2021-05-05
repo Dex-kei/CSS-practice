@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 可以先設定一個.box(例如姓氏) 可以讓下方class設定成範本 套用.box能夠讓相關設定延續 */
+        .box {
+            /* 父權限 如姓氏 */
+            width: 200px;
+            height: 200px;
+            background-color: #afa;
+            border-radius: 50px;
+            float: left;
+            margin: 10px;
+        }
+
+        .box2 {
+            /* 子權限 如姓 名*/
+            width: 200px;
+            height: 200px;
+            background-color: #afa;
+            border-radius: 50px;
+            float: left;
+            margin: 10px;
+        }
+
+        .box3 {
+            /* 圓角只導50px */
+            border-radius: 50px;
+
+        }
+
+        /* 圓角順序左上 右上 右下 左下 */
+        .box4 {
+            border-radius: 10px 20px 30px 40px;
+        }
+
+        .box5 {
+            border-radius: 100% 0 0 0;
+        }
+
+        .box6 {
+            border-radius: 20px/50px;
+        }
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            /* overflow 如同遮罩 需要遮罩以防圖片爆版會不顯示 */
+            overflow: hidden;
+        }
+
+        .img {
+            /* 定義圖片 會100%輸出防止高寬變形 */
+            width: 100%;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box"></div>
+    <!-- 在class 設定成 box(姓) box2(名) 能夠讓上面讀取box設定套用 -->
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    <!-- div 或figure 都行 -->
+    <div class="circle">
+        <img src="images/ex1_pic1.jpg">
+    </div>
+</body>
+
+</html>

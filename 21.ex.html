@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 800px;
+            height: 430px;
+
+            background-color: rgb(182, 149, 134);
+
+            /* 屬性改 grid */
+            display: grid;
+            /* 定義容器有多少欄(給寬度值) */
+            grid-template-columns: 240px auto;
+            /* 定義容器有多少列(給高度值) */
+            grid-template-rows: 100px 200px 1fr;
+            /* 間距5px */
+            gap: 5px ;
+
+
+            /* grid-template-areas能夠讓 上面grid-template切好的區塊 進行位移排版 下方也必須對應 否則無法運作 */
+            grid-template-areas:
+                "header header"
+                "content menu"
+                "footer footer";
+        }
+
+        .header{
+            /* 對應上面grid-template-areas  設置grid-area:該元素引導 */
+            grid-area: header;
+            background-color: aqua;
+        }
+        .menu{
+            /* 對應上面grid-template-areas  設置grid-area:該元素引導 */
+            grid-area: menu;
+            background-color: rgb(175, 175, 175);
+        }
+        .content{
+            /* 對應上面grid-template-areas  設置grid-area:該元素引導 */
+            grid-area: content;
+            background-color: crimson;
+        }
+        .footer{
+            /* 對應上面grid-template-areas  設置grid-area:該元素引導 */
+            grid-area: footer;
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="menu">menu
+            <div class="menu menu_1">menu_1</div>
+            <div class="menu menu_2">menu_2</div>
+        </div>
+
+        <div class="content">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+        <div class="footer"></div>
+
+    </div>
+
+</body>
+
+</html>

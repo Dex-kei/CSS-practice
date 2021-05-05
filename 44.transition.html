@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #afa;
+            transition: all 3s;
+            transition-delay: .2s;
+        }
+
+        .box:hover {
+            background-color: #faf;
+            width: 500px;
+
+        }
+
+        .ease-in {
+            /* https://cubic-bezier.com/ 可透過貝茲曲線網站直接計算複製使用 */
+            transition-timing-function: cubic-bezier(.82, -0.01, .32, 1.12);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box ease-in"></div>
+</body>
+
+</html>

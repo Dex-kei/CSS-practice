@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 200px;
+            /* 不需要限制高 可讓背景延伸至最底 */
+            /* height: 220px; */
+            border-radius: 10px;
+            background-color: #cccccc;
+
+            /* 下方body card父權 circle子權 會黏在一起 直接加madding會同步移動  */
+            /* 需透過padding-top只加上方區塊 讓card 與 circle分開 */
+            /* 處理過後 card與circle分開 就可單獨使用margin移動 */
+
+            /* 現在上面安插圖片 因此不需要padding-top往上推出空間 */
+            /* padding-top: 20px; */
+
+            /* 文字-置中 */
+            text-align: center;
+            
+            /* 相對-調整 區塊位置會保留原處 但如果加了top 或是left 會由原本區塊開始計算顯示位置改變 但是區塊元素不動 區塊依然留者   */
+            position: relative;
+
+            /* 如果下 position:absolute 會將脫離原本區塊 尋找:absolute | fixed | inheritm元素設定 若沒有將會由最上層body開始計算區塊顯示 */
+        }
+
+        .banner {
+            height: 100px;
+            background-image: url(./images/flowers.jpg);
+            background-size: cover;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* 切除多餘範圍 */
+            overflow: hidden;
+
+            /* margin讓照片往回推 覆蓋上層 */
+            /* 只有margin能"負"直往回推 padding無法 */
+            /*      上下 左右 */
+            margin: -50px auto 0;
+
+        }
+
+        .circle img {
+            width: 100%;
+
+        }
+
+        .content {
+            padding-top: 10px;
+            margin: 10px 5px 5px;
+        }
+
+        h3 {
+            width: 80%;
+            /* border-bottom外框底 1px 細線 黑  */
+            border-bottom: 1px solid #000000;
+            margin: 0 auto;
+            padding: 0 0 5px;
+        }
+
+        .background_1 {
+            display: block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="card">
+        <div class="banner"></div>
+        <figure class="circle">
+            <img src="./images/ex1_pic1.jpg">
+        </figure>
+        <div class="content">
+            <h3>jean</h3>
+            <p>Hello,nice to meet you.</p>
+            <a href="#" class="background_1">Follow me</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

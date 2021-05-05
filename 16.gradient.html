@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+
+        }
+
+        /* linear-gradinet線性漸層 預設是橫的 可改變角度 */
+        .grad1 {
+            background: linear-gradient(red, orange, yellow, green, blue);
+        }
+
+        .grad2 {
+            /*                                    紅色從50%位置開始漸層 */
+            background: linear-gradient(to right, red 50%, orange, yellow, green);
+        }
+
+        .grad3 {
+            background: linear-gradient(135deg, red, orange, yellow, green, blue, purple)
+        }
+
+        .grad4 {
+            /*  紅色從50%開始 紫色從80%->100%開始 50~80%中間開始漸層 */
+            background: linear-gradient(to right, red 50%, orange, yellow, green, blue, purple 80%);
+        }
+
+        .grad6 {
+            background: linear-gradient(rgba(255, 0, 0), rgba(255, 0, 0, 0)70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0)70.71%),
+                linear-gradient(359deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0)70.71%);
+            background-size: 20px 20px;
+        }
+
+        .grad7 {
+            background: linear-gradient(to right, rgba(255, 192, 203, 0.513) 50%, rgba(255, 255, 170, 0.513) 50%), linear-gradient(pink 50%, #ffa 50%);
+            background-size: 20px 20px;
+        }
+
+        /* 重複                                   圓形漸層 */
+        .grad10 {
+            background: repeating-radial-gradient(circle, deeppink, orchid 8%, hotpink 16%, deeppink 25%);
+        }
+
+        .grad11 {
+
+            /* 透過之前2個範例融合 漸層+字上貼圖 */
+
+            /* 可由 設定位置數值 (第一個值為X 第二個值為Y) */
+            background: radial-gradient(at 95% 80px, rgb(5, 176, 243) 10%, rgb(220, 6, 240) 65%);
+
+
+            /* 可由 設定位置名稱  */
+            /* background: radial-gradient(circle at right bottom, rgb(251, 31, 240), rgb(42, 8, 235)); */
+            
+            
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100px;
+
+            background-clip: text;
+
+            -webkit-background-clip: text;
+            /*        透明 */
+            color: transparent;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box grad1">grad1</div>
+    <div class="box grad2">grad2</div>
+    <div class="box grad3">grad3</div>
+    <div class="box grad4">grad4</div>
+    <div class="box grad6">grad6</div>
+    <div class="box grad7">grad7</div>
+    <div class="box grad10">grad10</div>
+    <div class="box grad11">Hello world</div>
+
+
+</body>
+
+</html>
